@@ -1,0 +1,29 @@
+﻿body,h1,h2,h3,h4,h5,h6
+div{
+    margin:0px;
+    padding:0px;
+}
+.safewidth
+{
+    width:760px;
+}
+.fl
+{
+    float:left;
+}
+.fr
+{
+    float:right;
+}
+.clr
+{
+    clear:both;
+}
+.first_address, .non_first_address
+{
+    display:block;
+}
+.non_first_address
+{
+    display:none;
+}

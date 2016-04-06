@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        
+    </title>
+    <link href="Style/default.css" rel="stylesheet" />
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header" class="safeWidth">
+        <div class="fl">
+        <asp:Label runat="server" ID="Lb1"></asp:Label>
+        <asp:Button runat="server" ID="Btn_Log" Text="登陆" OnClick="Btn_Log_Click" />
+        <asp:Button runat="server" ID="Btn_register" Text="注册" OnClick="Btn_register_Click" />
+        </div>
+        <div class="fr">
+            <asp:Button runat="server" ID="Btn_ShopCart"  Text="购物车" OnClick="Btn_ShopCart_Click"/>
+        </div>
+       <div class="clr"></div>
+        
+        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" StaticDisplayLevels="2" Orientation="Horizontal"></asp:Menu>   
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+       
+    </div>
+    <div id="picture" class="safeWidth">
+        <asp:Image runat="server" ImageUrl="~/picture/LOGO.jpg" />
+    </div>
+    <div id="content" class="safeWidth">
+          <asp:ContentPlaceHolder id="Cph1" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+    <div id="foot" class="safeWidht">
+
+    </div>
+    </form>
+</body>
+</html>
